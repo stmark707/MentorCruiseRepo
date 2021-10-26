@@ -49,7 +49,8 @@ public class Graphing_School_Objects
             System.out.println();
         }
         
-        List_of_Schools.sort(new Enrollment_Size_Comparator()); //couldn't sort by integer :( an integer cannot be dereferenced
+        List_of_Schools.sort(new Enrollment_Size_Comparator()); 
+        
         
         System.out.print("################################################################Sorted List###########################################################");
         System.out.println();
