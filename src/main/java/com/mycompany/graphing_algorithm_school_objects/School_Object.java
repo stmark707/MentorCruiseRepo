@@ -48,4 +48,79 @@ public class School_Object
         }
         
     }
+
+    public String getSchool_name()
+    {
+        return School_name;
+    }
+
+    public void setSchool_name(String School_name)
+    {
+        this.School_name = School_name;
+    }
+
+    public String getStudent_Type()
+    {
+        return Student_Type;
+    }
+
+    public void setStudent_Type(String Student_Type)
+    {
+        
+         if (Student_Type == "Adult" ||Student_Type == "adult")
+        {
+             this.Student_Type = Student_Type;
+        }
+        else
+        {
+             this.Student_Type = "Child";
+        }
+    }
+
+    public int getEnrollment_Size()
+    {
+        return Enrollment_Size;
+    }
+
+    public void setEnrollment_Size(int Enrollment_Size)
+    {
+        
+         if ( Enrollment_Size <=1000 || Enrollment_Size >=0)
+        {
+            this.Enrollment_Size = Enrollment_Size;
+        }
+        else
+        {
+            this.Enrollment_Size = 1;
+        }
+    }
+
+    public String getSchool_classification()
+    {
+        return School_classification;
+    }
+
+    public void setSchool_classification(String School_classification)
+    {
+        this.School_classification = School_classification;
+        if (School_classification == "Private" || School_classification == "private")
+        {
+            this.School_classification = School_classification;
+        }
+        else
+        {
+            this.School_classification = "Public";
+        }
+         }
+        
+        @Override
+    public String toString()
+    
+   {                                            
+      return String.format("Below are the following characteristic of the school: %nSchool Name: %s%nSchool Student Type: %s%nSchool Classification type:"
+              + " %s%nSchool Enrollment Size: %d", getSchool_name(), getStudent_Type(), getSchool_classification(), getEnrollment_Size());                                     
+   }
+    
+    
+    
 }
