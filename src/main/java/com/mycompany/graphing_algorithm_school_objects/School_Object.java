@@ -15,6 +15,7 @@ public class School_Object
     public String Student_Type;
     public int Enrollment_Size;
     public String School_classification;
+    //If these are public than there is no need for getters and setter, make these private
     
     public School_Object(String name, String student_type, int enrollment_size, String school_classification)
     {
