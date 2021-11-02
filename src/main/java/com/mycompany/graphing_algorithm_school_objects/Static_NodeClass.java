@@ -48,12 +48,12 @@ public class Static_NodeClass
         if (FirstSchool.getEnrollment_Size() < current.FirstSchool.getEnrollment_Size())
         {
             current.Left = addRecursive(current.Left, FirstSchool);
-            System.out.println("This object is going to the left");
+            System.out.printf("%s%n Going to the left %n", FirstSchool.toString());
         }
         else if (FirstSchool.getEnrollment_Size() > current.FirstSchool.getEnrollment_Size())
         {
             current.Right = addRecursive(current.Right, FirstSchool);
-            System.out.println("This object is going to the Right");
+            System.out.println(FirstSchool.toString());
         }
         else
         {
