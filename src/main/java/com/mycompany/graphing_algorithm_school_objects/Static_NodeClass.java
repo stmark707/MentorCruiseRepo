@@ -45,20 +45,17 @@ public class Static_NodeClass
         {
             return new Node(FirstSchool);
         }
-        if (FirstSchool.getEnrollment_Size() < current.FirstSchool.getEnrollment_Size())
+        if (FirstSchool.getEnrollment_Size() <= current.FirstSchool.getEnrollment_Size())
         {
             current.Left = addRecursive(current.Left, FirstSchool);
             System.out.printf("%s%n Going to the left %n", FirstSchool.toString());
         }
-        else if (FirstSchool.getEnrollment_Size() > current.FirstSchool.getEnrollment_Size())
+        else if (FirstSchool.getEnrollment_Size() >= current.FirstSchool.getEnrollment_Size())
         {
             current.Right = addRecursive(current.Right, FirstSchool);
             System.out.println(FirstSchool.toString());
         }
-        else
-        {
-            return current;
-        }
+        
         
         return current;
     }
