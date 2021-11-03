@@ -48,6 +48,19 @@ public class Graphing_School_Objects
             System.out.println();
             System.out.println();
         }
+           
+        System.out.print("################################################################Add to Tree###########################################################");
+        System.out.println();
+        System.out.println();
+        
+        Static_NodeClass maybeTree = new Static_NodeClass();
+        
+        for (School_Object schools : List_of_Schools)
+        {
+            maybeTree.add(schools);
+        }
+        
+        
         
         List_of_Schools.sort(new Enrollment_Size_Comparator()); 
         
@@ -68,13 +81,15 @@ public class Graphing_School_Objects
         System.out.println();
         System.out.println();
         
+        //descending order tree 
+        /*
         Static_NodeClass maybeTree = new Static_NodeClass();
         
         for (School_Object schools : List_of_Schools)
         {
             maybeTree.add(schools);
         }
-        
+        */
     }
     
 }
