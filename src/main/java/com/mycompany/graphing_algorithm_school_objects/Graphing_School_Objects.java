@@ -62,7 +62,7 @@ public class Graphing_School_Objects
         
         
         
-        List_of_Schools.sort(new Enrollment_Size_Comparator()); 
+        List_of_Schools.sort(new Enrollment_Size_Comparator());
         
         
         System.out.print("################################################################Sorted List###########################################################");
@@ -71,9 +71,11 @@ public class Graphing_School_Objects
         
          for (School_Object schools : List_of_Schools)
         {
-            System.out.print(schools.toString());
+           
+            System.out.print(schools.toString());     
             System.out.println();
             System.out.println();
+            
         }
         
          
