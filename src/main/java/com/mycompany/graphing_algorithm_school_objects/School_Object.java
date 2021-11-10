@@ -5,23 +5,29 @@
  */
 package com.mycompany.graphing_algorithm_school_objects;
 
+import java.util.Comparator;
+
 /**
  *
  * @author stmar
  */
-public class School_Object
+public class School_Object implements Comparator<School_Object>
 {
-    public String School_name;
-    public String Student_Type;
-    public int Enrollment_Size;
-    public String School_classification;
+    //getting rid of the comparator class and integrating it inside of the school object class by overriding a method
+    //from the class comparable
+    
+    //changing the attributes from public to private
+    private String School_name;
+    private String Student_Type;
+    private int Enrollment_Size;
+    private String School_classification;
     //If these are public than there is no need for getters and setter, make these private
     
     public School_Object(String name, String student_type, int enrollment_size, String school_classification)
     {
         this.School_name = name;
         
-        if (student_type == "Adult" || student_type == "adult")
+        if (student_type.equalsIgnoreCase("Adult"))
         {
             this.Student_Type = "Adult";
         }
@@ -39,7 +45,7 @@ public class School_Object
             this.Enrollment_Size = 1;
         }
         
-        if (school_classification == "Private" || school_classification == "private")
+        if (school_classification.equalsIgnoreCase("Private"))
         {
             this.School_classification = school_classification;
         }
@@ -68,7 +74,7 @@ public class School_Object
     public void setStudent_Type(String Student_Type)
     {
         
-         if (Student_Type == "Adult" ||Student_Type == "adult")
+         if (Student_Type.equals("Adult"))
         {
              this.Student_Type = Student_Type;
         }
@@ -104,7 +110,7 @@ public class School_Object
     public void setSchool_classification(String School_classification)
     {
         this.School_classification = School_classification;
-        if (School_classification == "Private" || School_classification == "private")
+        if (School_classification.equalsIgnoreCase("Private"))
         {
             this.School_classification = School_classification;
         }
@@ -124,4 +130,11 @@ public class School_Object
     
     
     
+
+    
+    @Override
+    public int compare(School_Object School_two, School_Object School_one)
+    {
+        return School_two.getEnrollment_Size() - School_one.getEnrollment_Size();
+    }
 }

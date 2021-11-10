@@ -60,19 +60,25 @@ public class Graphing_School_Objects
             maybeTree.add(schools);
         }
         
+        System.out.print("################################################################Traverse the tree ###########################################################");
+        System.out.println();
+        System.out.println();
+        
+        maybeTree.traverseLevelOrder();
         
         
-        List_of_Schools.sort(new Enrollment_Size_Comparator());
+        //List_of_Schools.sort(new Enrollment_Size_Comparator());
         
-        
+       /* 
         System.out.print("################################################################Sorted List###########################################################");
         System.out.println();
         System.out.println();
         
-         for (School_Object schools : List_of_Schools)
+         for (int counter = 0; counter <= List_of_Schools.size(); counter++)
         {
+            
            
-            System.out.print(schools.toString());     
+            System.out.print(List_of_Schools.get(counter));     
             System.out.println();
             System.out.println();
             

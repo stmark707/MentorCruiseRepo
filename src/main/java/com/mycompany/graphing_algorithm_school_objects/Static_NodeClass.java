@@ -66,10 +66,44 @@ public class Static_NodeClass //name the class after the data structure
     {
         this.Root = addRecursive(Root, FirstSchool);
     }
-    
+  
+    /*
    
+  public String findSmallestValue(Static_NodeClass anytree)
+  {
+      School_Object A_node;
+      A_node = anytree.Root;
+      
+      
+      
+      return A_node.toString();
+  }*/
     
-    
-    
+  public void traverseLevelOrder() {
+        if (Root == null) {
+            return;
+        }
+
+        Queue<Node> nodes = new LinkedList<>();
+        nodes.add(Root);
+        //is a queue some form of a linked list?
+
+        while (!nodes.isEmpty()) {
+
+            Node node = nodes.remove();
+
+            System.out.print(" " + node.FirstSchool.toString());
+            System.out.println();
+            System.out.println();
+
+            if (node.Left != null) {
+                nodes.add(node.Left);
+            }
+
+            if (node.Right != null) {
+                nodes.add(node.Right);
+            }
+        }
+    }  
     
 }
